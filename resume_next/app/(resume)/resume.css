@@ -1,0 +1,31 @@
+main {
+    background-color: #ffffff;
+    margin: 1rem 10rem;
+    padding: 2rem 4rem;
+    /* font-family: cardo; */
+    font-family: cardo;
+    min-height: 100vh;
+  }
+
+  .hcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+}
+
+  .links{
+    width:min-content;
+  }
+
+  .contentHeading {
+    width:100%;
+    margin: 5px 0px;
+    font:normal normal bold 1.5rem serif;
+    
+    border-bottom: 1px solid #000000;
+  }

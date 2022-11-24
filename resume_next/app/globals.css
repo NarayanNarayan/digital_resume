@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html,
+  body {
+    background-color: #f2f2f2;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+      Helvetica Neue, sans-serif;
+  }
+  
+  .h1 {
+    margin-right: auto;
+    font:normal normal bold 2.5rem serif;
+  }
+  .h2 {
+    width:100%;
+    margin-right: auto;
+    margin: 5px 0px;
+    font:normal normal bold 2rem serif;
+    
+    border-bottom: 1px solid #000000;
+  }
+  .h3 {
+    margin-right: auto;
+    font:normal normal bold 1.2rem serif;
+  }
+  .h4 {
+    margin-right: auto;
+    font:normal normal italic 1.1rem serif;
+  }
+  
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* input, textarea { 
+    display: block;
+    max-width: 300px;
+    margin: 0.5rem 0;
+  } */
+  
+  /* button {
+    background-color: #000000;
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+  } */
+  
+
+  
+
+  .right-aligned {
+    /* position: absolute;
+    right : 0px; */
+    margin-left: auto;
+  }
+
+  
+
+  

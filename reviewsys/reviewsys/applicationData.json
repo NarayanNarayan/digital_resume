@@ -1,0 +1,48 @@
+{
+    "id": 1,
+    "Name": "",
+    "email":"",
+    "Contact": "",
+    "about":"",
+    "resume":"",
+    "isSelected":"",
+    "experiences": [
+        {
+            "position": "",
+            "institutionName": "",
+            "startDate": "",
+            "endDate": "",
+            "work": []
+        }
+    ],
+    "Projects": [
+        {
+            "startDate": "",
+            "endDate": "",
+            "work": []
+        }
+    ],
+    "Education": [
+        {
+            "collegeName": "",
+            "specialization":"",
+            "startyear": "",
+            "endyear": "",
+            "gpa": ""
+        }
+    ],
+    "Skills": [
+        ""
+    ],
+    "certifications": [
+        {
+            "certificationId":"",
+            "certificationName": "",
+            "issuingAthority": "",
+            "issueDate": ""
+        }
+    ],
+    "achievements": [
+        ""
+    ]
+}
