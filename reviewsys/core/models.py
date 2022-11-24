@@ -17,6 +17,11 @@ class Profile(models.Model):
     headline=models.CharField(max_length=320)
     contact = models.CharField(max_length=15)
     address=models.TextField(null=True)
+    pin=models.CharField(max_length=64)
+    city=models.CharField(max_length=64)
+    state=models.CharField(max_length=64)
+    country=models.CharField(max_length=64)
+
     dob=models.DateField()
     pic=models.FileField(upload_to='pic',null=True)
     skills=models.ManyToManyField(Skill)
@@ -27,7 +32,7 @@ class Profile(models.Model):
 
     about=models.TextField(null=True)
     interests=models.TextField(null=True)
-    summarry=models.TextField(null=True)
+    summary=models.TextField(null=True)
     vision=models.TextField(null=True)
     ideas=models.TextField(null=True)
     def __str__(self) -> str:

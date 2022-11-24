@@ -47,7 +47,8 @@ class ProfileSerializer(serializers.ModelSerializer):
     achieveements=serializers.StringRelatedField(many=True) """
     class Meta:
         model=Profile
-        fields = ['id','name','email','contact','about','curriculumVitae','skills','isSelected',
+        fields = ['id','name','email','headline','contact','dob','address','pin','city','state','country','pic','github','linkedin','website','about','interests','summary','vision','ideas',
+        'skills',
         'experiences',
 'projects',
 'education',
