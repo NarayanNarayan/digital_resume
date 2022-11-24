@@ -21,9 +21,9 @@ class ApplicantAPIView(ListCreateAPIView):
     serializer_class=ProfileSerializer
     queryset=Profile.objects.all()
     filter_backends=[DjangoFilterBackend,filters.SearchFilter,filters.OrderingFilter]
-    search_fields=['id','name','email','contact','about','isSelected']
-    filterset_fields=['id','name','email','contact','about','isSelected']
-    Ordering_fields=['id','name','email','contact','about','isSelected']
+    search_fields=['id','name','email','contact','about',]
+    filterset_fields=['id','name','email','contact','about',]
+    Ordering_fields=['id','name','email','contact','about',]
 
 '''
 ApplicantDetailAPIView handles get,put and delete requests
