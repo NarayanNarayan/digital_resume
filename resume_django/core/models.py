@@ -83,6 +83,7 @@ class Education(models.Model):
     collegeName=models.CharField(max_length=64)
     startYear=models.DecimalField(max_digits=4,decimal_places=0)
     endYear=models.DecimalField(max_digits=4,decimal_places=0,null=True)
+    """ cgpa=models.DecimalField(max_digits=4,decimal_places=2,null=True) """
     def __str__(self) -> str:
         return '%s %s %s' % (self.degreeName,self.major,self.collegeName)
 
