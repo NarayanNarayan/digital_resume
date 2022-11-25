@@ -29,7 +29,7 @@ export default function SomeResume({params}:any){
     },[]);
     
     return (
-        <main>
+        <main id="printable">
             <Intro {...res}></Intro>
             <Education
             {...{collegeName:'IIT Kharagpur',

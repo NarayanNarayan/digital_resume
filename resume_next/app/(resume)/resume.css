@@ -16,6 +16,7 @@ main {
   height: min-content;
 }
   .hcontainer{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +29,7 @@ main {
 
   .links{
     width:min-content;
+    margin-left: auto;
   }
 
   .contentHeading {

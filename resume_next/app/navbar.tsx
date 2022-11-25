@@ -1,3 +1,4 @@
+'use client';
 import "./navbar.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -16,7 +17,10 @@ import { useState } from "react";
 export default function Navbar() {
   const [search, setSearch] = useState("");
   const router = useRouter();
+  function print(){
+    var printable=document.querySelector('#printable');
 
+  }
   return (
     <nav>
       <ul className="navbar-nav">
@@ -56,6 +60,7 @@ export default function Navbar() {
                     query: { search: search },
                   }
             }
+            prefetch={false}
           >
             <span>
               <Image
@@ -70,9 +75,9 @@ export default function Navbar() {
         </li>
         <li className="nav-item right-aligned">
           <div>
-            <a className="nav-link" href="/">
+            <button className="nav-link" onClick={print}>
               Print
-            </a>
+            </button>
             
             <a className="nav-link" href="/">
               Log In

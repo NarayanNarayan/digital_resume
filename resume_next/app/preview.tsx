@@ -21,8 +21,8 @@ export default function Preview(profile:any) {
     </div>
     
     <div className="links">
-    <div className="link"><a href={`mailto:${profile.email}`}>Email:</a>{profile.email}</div>
-    <div className="link"><a href={profile.github}>GitHub:</a>{profile.github}</div>
+    <div className="link"><a href={`mailto:${profile.email}`}>Email:{profile.email}</a></div>
+    <div className="link"><a href={profile.github}>GitHub:{profile.github}</a></div>
     <div className="link"><a href={profile.linkedin}>LinkedIn</a></div>
 
     </div>

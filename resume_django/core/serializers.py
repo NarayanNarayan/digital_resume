@@ -73,3 +73,49 @@ class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
         fields = ['id', 'name']
+
+
+class ExperienceSerializer(serializers.ModelSerializer):
+    applicant = serializers.SlugRelatedField(
+        queryset=Profile.objects.all(),
+        slug_field='name'
+    )
+    class Meta:
+        model = Experience
+        fields = ['id','applicant','position','institutionName','startDate','endDate','work']
+class EducationSerializer(serializers.ModelSerializer):
+    applicant = serializers.SlugRelatedField(
+        queryset=Profile.objects.all(),
+        slug_field='name'
+    )
+    class Meta:
+        model = Education
+        fields = ['id', 'applicant','degreeName','major','collegeName','startYear','endYear']
+
+class ProjectSerializer(serializers.ModelSerializer):
+    applicant = serializers.SlugRelatedField(
+        queryset=Profile.objects.all(),
+        slug_field='name'
+    )
+    class Meta:
+        model = Project
+        fields = ['id','applicant','name','startDate','endDate','work' ]
+
+class CertificationSerializer(serializers.ModelSerializer):
+    applicant = serializers.SlugRelatedField(
+        queryset=Profile.objects.all(),
+        slug_field='name'
+    )
+    class Meta:
+        model = Certification
+        fields = ['id','applicant','name','certificationId','issuingAthority','issueDate']
+
+
+class AchievementSerializer(serializers.ModelSerializer):
+    applicant = serializers.SlugRelatedField(
+        queryset=Profile.objects.all(),
+        slug_field='name'
+    )
+    class Meta:
+        model = Achievement
+        fields = ['id','applicant', 'name']

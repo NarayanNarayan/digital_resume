@@ -35,7 +35,7 @@ export default function HomePage() {
   }
   useEffect(() => {
     getCV();
-  }, []);
+  }, [search]);
 
   return (
     <>
