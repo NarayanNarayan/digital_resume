@@ -23,11 +23,12 @@ function Project(exp:any){
 }
 
 
-export default function Projects(proj:any){
+export default function Projects(data:any){
   return (
     <>
     <div className="h2">Projects</div>
-    <Project {...proj}></Project>
+    {/* <Project {...proj}></Project> */}
+    {data.project.map(Project)}
     </>
   );
 }

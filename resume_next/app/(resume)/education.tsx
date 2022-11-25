@@ -12,8 +12,8 @@ function AEducation(aedu:any) {
 
   return (
     <>
-    <span style={{ marginRight: "auto",}}>{aedu.collegeName}</span>
-    <span style={{ marginLeft: "auto",}}>{aedu.fromDate}-{aedu.toDate}</span>
+    <span style={{ marginRight: "auto",fontWeight:"bold"}}>{aedu.collegeName}</span>
+    {/* <span style={{ marginLeft: "auto",}}>{aedu.fromDate}-{aedu.toDate}</span> */}
     <span style={{ marginRight: "auto",}}>{aedu.degreeName}</span>
     <span style={{ marginRight: "auto",}}>{aedu.major}</span>
     <span style={{ marginRight: "auto",}}>{aedu.cgpa}</span>
@@ -22,12 +22,13 @@ function AEducation(aedu:any) {
   );
 }
 
-export default function Education(edu:any) {
+export default function Education(data:any) {
 
   return (
     <>
     <div className="h2">Education</div>
-    <AEducation {...edu}></AEducation>
+    {/* <AEducation {...data.education}></AEducation> */}
+    {data.education.map(AEducation)}
     </>
   );
 }

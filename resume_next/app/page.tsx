@@ -36,12 +36,11 @@ export default function HomePage() {
   useEffect(() => {
     getCV();
   }, [search]);
-
+  console.log(JSON.stringify(res));
   return (
     <>
       {res.results.map(Preview)}
       {/* <Preview {...(res.results[0])}></Preview> */}
-      <p>{JSON.stringify(res)}</p>
     </>
   );
 }
