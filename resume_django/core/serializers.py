@@ -16,31 +16,31 @@ class ProfileSerializer(serializers.ModelSerializer):
         many=True,
         read_only=False,
         queryset=Experience.objects.all(),
-        slug_field='position'
+        slug_field='id'
     )
     projects = serializers.SlugRelatedField(
         many=True,
         read_only=False,
         queryset=Project.objects.all(),
-        slug_field='name'
+        slug_field='id'
     )
     education = serializers.SlugRelatedField(
         many=True,
         read_only=False,
         queryset=Education.objects.all(),
-        slug_field='collegeName'
+        slug_field='id'
     )
     certifications = serializers.SlugRelatedField(
         many=True,
         read_only=False,
         queryset=Certification.objects.all(),
-        slug_field='name'
+        slug_field='id'
     )
     achieveements = serializers.SlugRelatedField(
         many=True,
         read_only=False,
         queryset=Achievement.objects.all(),
-        slug_field='name'
+        slug_field='id'
     )
     """ experiences=serializers.StringRelatedField(many=True)    
     projects=serializers.StringRelatedField(many=True)
@@ -82,7 +82,7 @@ class ExperienceSerializer(serializers.ModelSerializer):
     )
     class Meta:
         model = Experience
-        fields = ['id','applicant','position','institutionName','startDate','endDate','work']
+        fields = ['id','applicant','id','institutionName','startDate','endDate','work']
 class EducationSerializer(serializers.ModelSerializer):
     applicant = serializers.SlugRelatedField(
         queryset=Profile.objects.all(),
