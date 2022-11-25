@@ -9,8 +9,8 @@ export default function Intro(profile:any) {
     <div className="h1">{profile.name}</div>
     <div className="links">
     <div className="link"><a href={`mailto:${profile.email}`}>Email</a></div>
-    <div className="link"><a href={profile.githubid}>GitHub:{profile.github}</a></div>
-    <div className="link"><a href={profile.linkedInid}>LinkedIn</a></div>
+    <div className="link"><a href={profile.github}>GitHub{/* :{profile.github} */}</a></div>
+    <div className="link"><a href={profile.linkedin}>LinkedIn</a></div>
 
     </div>
     

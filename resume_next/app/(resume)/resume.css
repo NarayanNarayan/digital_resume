@@ -6,7 +6,15 @@ main {
     font-family: cardo;
     min-height: 100vh;
   }
-
+.card {
+  background-color: #ffffff;
+  margin: 1rem 10rem;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  /* font-family: cardo; */
+  font-family: cardo;
+  height: min-content;
+}
   .hcontainer{
     display: flex;
     justify-content: space-between;

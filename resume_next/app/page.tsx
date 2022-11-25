@@ -9,11 +9,21 @@ import Experience from "./(resume)/experiance";
 import Skills from "./(resume)/skill";
 import { useSearchParams } from "next/navigation";
 import Head from "next/head";
+import Preview from "./preview";
 
 const url = "http://127.0.0.1:8000/core/applicant/";
-
+const initialData={results:[{
+  id:"1",
+  name: "Narayan Gupta",
+  headline:" Google | Microsoft | Meta | Ribrik",
+  email: "narayan1011g@gmail.com",
+  github: "https://github.com/NarayanNarayan",
+  linkedin: "https://www.linkedin.com/in/narayan-gupta-539470205/",
+  experience:[{position:"Principle Engineer",institutionName:"Google"}],
+  education:[{degreeName:"PhD",major:"Physics",collegeName:"MIT"}]
+}]}
 export default function HomePage() {
-  const [res, setRes] = useState(null);
+  const [res, setRes] = useState(initialData);
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
 
@@ -28,31 +38,22 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main>
-      {/* <Head>
-      <link key="9986" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"/>
-      <title key="99986" >Hello</title>
-      </Head> */}
-      <Intro
-        {...{
-          name: "Narayan Gupta",
-          email: "narayan1011g@gmail.com",
-          gitHub: "https://github.com/NarayanNarayan",
-          linkedIn: "https://www.linkedin.com/in/narayan-gupta-539470205/",
-        }}
-      ></Intro>
-      <Experience
-        {...{
-          topic: "Software Engineering 2 @ Citrix",
-          fromDate: "Aug22",
-          toDate: "Aug22",
-          description: "No Work",
-          line: ["Some work", "Some work", "Some work", "Some work"],
-        }}
-      ></Experience>
-      <Skills></Skills>
+    <>
+      {res.results.map(Preview)}
+      {/* <Preview {...(res.results[0])}></Preview> */}
       <p>{JSON.stringify(res)}</p>
-      <button onClick={getCV}>Click me</button>
-    </main>
+    </>
   );
 }
+{/* <Preview
+        {...{
+          id:"1",
+          name: "Narayan Gupta",
+          headline:" Google | Microsoft | Meta | Ribrik",
+          email: "narayan1011g@gmail.com",
+          github: "https://github.com/NarayanNarayan",
+          linkedin: "https://www.linkedin.com/in/narayan-gupta-539470205/",
+          experience:[{position:"Principle Engineer",institutionName:"Google"}],
+          education:[{degreeName:"PhD",major:"Physics",collegeName:"MIT"}]
+        }}
+      ></Preview> */}

@@ -8,7 +8,7 @@ function point(s:string){
   )
 }
 
-function Experience(exp:any){
+function Project(exp:any){
   return (
     <>
     <div className="hcontainer"> 
@@ -22,21 +22,12 @@ function Experience(exp:any){
   );
 }
 
-export default function Experiences(exps:any) {
 
+export default function Projects(proj:any){
   return (
     <>
-    <div className="h2">Experience</div>
-    <Experience {...exps}></Experience>
+    <div className="h2">Projects</div>
+    <Project {...proj}></Project>
     </>
   );
-}
-
-export function Projects(proj:any){
-  return (
-    <>
-    <div className="h2">Project</div>
-    <Experience {...proj}></Experience>
-    </>
-  )
 }
